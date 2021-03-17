@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+.header{
+    align-items: center;
+    background-color: #21C08B;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+}
+
+.header_img{
+    width: 200px;
+    margin-left: 30px;
+}
+
+.login{
+    background: linear-gradient(#21C08B, #AB88FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0px;
+    min-height: calc(100vh - 200px);/*Min height garantiza que no importa la pantalla siempre va a tener este valor. calc(100vh) es una medida similar al %, con este indicamos el 100% de lo que ve el usuario en el momento menos 200px que son el header y el footer*/
+}
+
+.login_container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+}
+
+.login_container_form{
+    display: flex; 
+    flex-direction: column;
+}
+
+.login_container_form label{
+    font-size: 14px;
+}
+
+.login_container_form_remember{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login_container_form_remember a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login_container_form_remember a:hover{
+    text-decoration: underline;
+}
+
+.login_container_social > div{/*El selector > es hijo directo, es decir únicamente estilizar a los div que estén un nivel por debajo del elemento padre.*/
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
