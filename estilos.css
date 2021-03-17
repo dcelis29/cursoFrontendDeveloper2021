@@ -1,13 +1,13 @@
 body{
-    background-color: #AB88FF;
+    background-color: #8f57fd;
     margin: 0;
-    font-family: 'Muli', sans-serif;;
+    font-family: 'Muli', sans-serif;
 }
 
 .header{
     width: 100%;
     height: 80px;
-    background-color:#AB88FF;
+    background-color:#8f57fd;
     display: flex; /*Para poder utilizar justify content*/
     justify-content: space-between; /*Coloca espacio horizontal en medio entre los elementos que esten dentro de la clase (en este caso .header)*/
     align-items: center; /*Alinea los elementos del contenedor de forma vertical*/
@@ -65,3 +65,108 @@ body{
     margin: 0px;
     color: white;
 }
+
+.main {
+    height: 300px;
+}
+
+.main_titulo{
+    color: white;
+    font-size: 25px;
+}
+
+.input{
+    border:2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0 20px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder{
+    color: white;
+}
+
+
+/*************CARRUSEL*******************/
+.carrusel{
+    width: 100%;
+    overflow: scroll; /*para que ponga el scroll ya que el carrusel excede el tamaño de la pantalla. Lo pone justo debajo del elemento y no al inferior de la pantalla como habitualmente es*/
+}
+
+.carrusel_container{
+    white-space: nowrap; /*Con esto indicamos que cuando se excede el tamaño horizontal de la pantalla, siga naturalmente y no los baje*/
+    margin: 70px 20px;
+    padding-bottom: 10px;
+}
+
+.carrusel_container_item{
+    background-color: brown;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carrusel_container_item:hover ~ .carrusel_container_item{ /* la ~ se coloca para que fucnione con y son hover*/
+    transform: translate3d(100px, 0, 0); /*Cuendo entra al hover mueve 100px los elementos que están a la derecha*/
+}
+
+.carrusel_container:hover .carrusel_container_item {/*para que se pongan opacos los ítems*/
+    opacity: 0.3;
+}
+
+.carrusel_container:hover .carrusel_container_item:hover{
+    transform: scale(1.5);
+    opacity: 1; /*Se le quita la opacidad al ítem sobre el que esta situado*/
+}
+
+.carrusel_container_item_img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /*para que no se distorcione el tamaño original de la imagen*/
+}
+
+.carrusel_container_item_detalles{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9)0%, rgba (0, 0, 0, 0)100%); /*Se coloca gradiente desde transparente hasta oscuro*/
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+.carrusel_container_item_detalles img{
+    width: 15px;  
+}
+
+ .carrusel_container_item_detalles:hover{
+    color: white;
+    opacity: 1;
+}
+
+.carrusel_container_item_detalles_titulo, .carrusel_container_item_detalles_subtitulo{
+    margin: 3px;   
+}
+
+
+/********************INICIAR SESIÓN************************/
+
