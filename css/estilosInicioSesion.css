@@ -37,6 +37,9 @@ body{
     padding: 60px 68px 40px;
     min-height: 700px;
     width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;/*flex, space-around, y column, se colocan para que se distribuya uniformemente el contenido en la columna*/
 }
 
 .login_container_form{
@@ -70,4 +73,81 @@ body{
     align-items: center;
     font-size: 14px;
     margin-bottom: 10px;
+}
+
+.login_container_social > div > img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.login_container_register{
+    font-size: 14px;
+}
+
+.login_container_iniciar{
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.login_container_register a, .login_container_iniciar a{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login_container_register a:hover, .login_container_iniciar a:hover{
+    text-decoration: underline;
+}
+
+.input{
+    background-color: transparent;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none; /*Es el recuadro que se marca cuando nos paramos en el input*/
+    height: 50px;
+}
+
+::placeholder{ /*:: indica que se va a estilizar un pseudoelemento, en este caso placeholder*/
+    color:white;
+}
+
+.button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;    
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background: #AB88FF;
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
 }
