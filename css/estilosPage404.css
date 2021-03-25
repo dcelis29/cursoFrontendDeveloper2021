@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+
+.header{
+    align-items: center;
+    background-color: #21C08B;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+}
+
+.header_img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.notFound{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(#21C08B, #AB88FF);
+    min-height: calc(100vh - 200px);/*Min height garantiza que no importa la pantalla siempre va a tener este valor. calc(100vh) es una medida similar al %, con este indicamos el 100% de lo que ve el usuario en el momento menos 200px que son el header y el footer*/
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+.notFound_h1{
+    margin: 0;
+    padding: 0;
+    font-size: 54px;
+    text-align: center;
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background: #AB88FF;
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    .login_container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;        
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
